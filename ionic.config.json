@@ -1,0 +1,14 @@
+{
+  "name": "Latinoism",
+  "app_id": "9e3e7ea8",
+  "gulpStartupTasks": [
+    "default",
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ],
+  "documentRoot": "www"
+}

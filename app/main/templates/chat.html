@@ -1,0 +1,17 @@
+<ion-view view-title="{{ 'chatText' | translate }}" hide-back-button="false">
+  <ion-content>
+    <div class="padding center" ng-if="showErrorView()"
+      ng-include="'main/templates/error-view.html'"></div>
+    <ion-refresher
+    pulling-text="{{ 'loadingText' | translate }}"
+    on-refresh="onReload()"></ion-refresher>
+    <div>
+      <h1>iBeacon Scan</h1>
+	<p id="warning">To detect iBeacons you will have to add the 128bit UUID's you
+	are looking for to the regions array in app.js of the iBeacon example.
+	</p>
+	<ul id="found-beacons" class="dynamic"></ul>
+
+    </div>
+  </ion-content>
+</ion-view>

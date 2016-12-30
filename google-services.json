@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "491285450192",
+    "firebase_url": "https://latinoism-6bb65.firebaseio.com",
+    "project_id": "latinoism-6bb65",
+    "storage_bucket": "latinoism-6bb65.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:491285450192:android:faf0614abf56d091",
+        "android_client_info": {
+          "package_name": "com.latinoism.nearme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "491285450192-bb49vki2ogjl2fnndsdqr8tr84gca0me.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6-CvGwhjT1SmGm4zfaM7_am0pZYvzozc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,61 @@
+<ion-modal-view ng-controller="SignInCtrl" style="background: url(main/assets/images/signin_background.jpg) no-repeat center;background-size:cover;">
+  <ion-header-bar class="nearme-bg">
+    <div class="buttons">
+      <button class="button button-clear button-light" ng-click="closeSignInModal()">
+        {{ "closeText" | translate }}
+      </button>
+    </div>
+    <h1 class="title stable">{{ "signInText" | translate }}</h1>
+  </ion-header-bar>
+  <ion-content class="nearme-bg-dark">
+    <div class="spacer" style="width: 300px; height: 50px;">
+    </div>
+    <div class="list text-center">
+      <img class="logo" src="main/assets/images/logo.png" width="96" height="96">
+    </div>
+    <div class="list list-inset" style="background:none">
+      <form name="form" class="center-form" ng-hide="showRecoverPasswordForm" novalidate>
+        <div class="loginfield-wrapper top-input">
+          <label class="item item-input" style="background: transparent;">
+          <input type="text" class="email_address text-input text-input--underbar has_validation" placeholder="{{ 'emailText' | translate }}"
+          ng-model="login.email" autocapitalize="none" autocorrect="off" required>
+          </label>
+        </div>
+
+        <div class="loginfield-wrapper bottom-input">
+          <label class="item item-input" style="background: transparent;">
+          <input type="password" class="password text-input text-input--underbar has_validation" placeholder="{{ 'passwordText' | translate }}"
+          ng-model="login.password" autocapitalize="none" autocorrect="off" required>
+          </label>
+        </div>
+</br>
+        <div class="list text-center">
+          <button class="button button-{{theme}}" ng-click="onSignIn(form.$valid)">
+            <strong>{{ "signInText" | translate }}</strong>
+          </button>
+        </div>
+      </form>
+      <form name="recoverForm" ng-show="showRecoverPasswordForm">
+        <label class="item item-input">
+          <input type="text" placeholder="{{ 'emailText' | translate }}"
+          ng-model="login.email" autocapitalize="none" autocorrect="off" required>
+        </label>
+        <br><br>
+        <div class="list text-center">
+          <button class="button button-{{theme}}"
+            ng-click="recoverPassword(recoverForm.$valid)">
+            <strong>{{ "resetPasswordText" | translate }}</strong>
+          </button>
+        </div>
+      </form>
+    </div>
+    <p class="text-center positive" ng-click="onRecoverPassword(true)"
+      ng-if="!showRecoverPasswordForm">
+      {{ "forgotPasswordText" | translate }}
+    </p>
+    <p class="text-center positive" ng-click="onRecoverPassword(false)"
+      ng-if="showRecoverPasswordForm">
+      {{ "signInText" | translate }}
+    </p>
+  </ion-content>
+</ion-modal-view>
